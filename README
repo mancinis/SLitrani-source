@@ -64,6 +64,10 @@ HOW TO USE THIS GUIDE:
      >make
     Now its time for your second cup of tea!
     
+    Once this is done you'll be prompted to run:
+    >source bin/thisroot.sh
+    And you shoud be done!
+    
   1.d - Test ROOT
     Its easy to test root, just run:
      >root
@@ -104,7 +108,13 @@ HOW TO USE THIS GUIDE:
   2.b Get SLitrani files
     If you havent already done so we need to download these SLitrani files.
     Open a new terminal window and type:
-    >git clone https://github.com/brickmen/slitrani-fixed.github
+    >git clone https://github.com/brickmen/slitrani-fixed.git
+    
+    Now copy the folder "macros" into the rootdev folder you made earlier
+    
+    Create in rootdev three folders: "bin", "include" and "lib".
+    
+    
     
     
 
