@@ -9,7 +9,7 @@ INTRODUCTION:
   When I went to use SLitrani there were many issues within the installation files so this GitHub Repository contains the files that I have modified to get SLitrani working onto my computer and those used at Warwick CSC. This guide is not meant to be exhaustive and you may need to do further edits yourself to get SLitrani running on your machine, I know for instance that certain linux versions are more picky about the makefiles than others and so I can only be sure this is working on the exact machine I'm using.
 
   I make no claim to this software, I simply am presenting the fixes I've made to get it running on my computers. SLitrani is owned by François-Xavier Gentit and the original code is found here http://gentitfx.fr/SLitrani/. 
-  If Mr Gentit is reading this please take note to the list at the bottom of all the changes I've made to your code and either link here or update your code so that newer systems can run this brilliant software!
+  If Mr Gentit is reading this please message me so I can send you the changes so that you can update your code so that newer systems can run this brilliant software!
 
 LINUX VERSION: OpenSUSE 12.3 x64 (current as of 26-Sep-2013)
 
@@ -71,15 +71,46 @@ HOW TO USE THIS GUIDE:
     After this quit ROOT with:
      >.q
     Done!
-    
+  
 2. Installing - SLitrani
 
+  2.a Setting Addresses
+    Just like driving a car, ROOT and SLitrani requires addresses to put its working files into.
+    There is a file in your home directory called ".bashrc" this tells your computer what to run everytime you load a terminal window.
+    We will use this to tell SLitrani where to install itself.
+    First create a folder in your home directory called "rootdev".
+    
+    MY username is "michael" so change everywhere you see michael to whatever your username is (go up a directory on home if you are unsure). 
+    Add to .bashrc using an app like kwrite, the following lines (EDIT michael!):
+    
+      export PATH="$PATH:/home/michael/rootdev/bin"
+      export LD_LIBRARY_PATH="$PATH:/home/michael/rootdev/lib"
+      export ROOTDEV=/home/michael/rootdev
+      
+   (If you cant see .bashrc it may be hidden, so show hidden files, still not there? create it!)
+   Next Navigate to: /root/etc/ 
+   There should be a file called "system.rootrc" copy this to your home directory.
+   Rename this file to: ".rootrc"
+   Find the line in this file that looks like: 
+   
+   Unix.*.Root.MacroPath:      .:$(ROOTSYS)/macros
+   
+   and then add to it so it looks like (remember you are not michael):
+   
+   Unix.*.Root.MacroPath:      .:$(ROOTSYS)/macros:/home/michael/rootdev/macros:
+   
+   And then root will know where to look for SLitrani Macros.
+   
+  2.b Get SLitrani files
+    If you havent already done so we need to download these SLitrani files.
+    Open a new terminal window and type:
+    >git clone https://github.com/brickmen/slitrani-fixed.github
+    
+    
+
+
 
     
 
 
 
-LIST OF CHANGES TO SLITRANI
-If you are a user please ignore this as all these changes are already in the GitHub repository and you dont need them.
-
-1	
