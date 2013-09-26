@@ -58,7 +58,21 @@ HOW TO USE THIS GUIDE:
    Drink said Tea, the temperature should be just about right.
     
   1.c - Compile ROOT
+    Next you need to get ROOT to configure itself for your machine (you still need to be in the root directory so "cd root" if you need to):
+     >./configure
+    And as the instructions say on screen, run make:
+     >make
+    Now its time for your second cup of tea!
     
+  1.d - Test ROOT
+    Its easy to test root, just run:
+     >root
+    And this should pop up the version number and the ROOT splash screen
+    After this quit ROOT with:
+     >.q
+    Done!
+    
+2. Installing - SLitrani
 
 
     
