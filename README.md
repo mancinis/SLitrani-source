@@ -19,8 +19,8 @@ HOW TO USE THIS GUIDE:
   Firstly read it all, its good to get an overview of what we are doing and why.
   Secondly use common sense, if you know a better way of doing what I'm trying to do, do it (and let me know how :)
   Code for terminal is written like:
-  >cd root
-  enter this: "cd root" in your terminal application, but skip the ">".
+    cd root
+  enter this: "cd root" in your terminal application.
   Any issues with this code please post an issue in GitHub.
   Finally if you have issues that cant be solved there my email address is m.d.abbott@warwick.ac.uk
 
@@ -29,15 +29,15 @@ HOW TO USE THIS GUIDE:
   NOTE: If you are working on a University managed machine (eg: Warwick CSC) ROOT may already be setup for you, check with your IT provider.
 
   1.a - Prerequisites and GIT
-    Go to http://root.cern.ch/drupal/content/build-prerequisites
-    Follow this guide and install all required prerequisites AND all optional ones
-    As of date this is done by
-    >sudo zypper install git bash make gcc-c++ gcc binutils \
+   Go to http://root.cern.ch/drupal/content/build-prerequisites
+   Follow this guide and install all required prerequisites AND all optional ones
+   As of date this is done by
+    sudo zypper install git bash make gcc-c++ gcc binutils \
         xorg-x11-libX11-devel xorg-x11-libXpm-devel xorg-x11-devel \
         xorg-x11-proto-devel xorg-x11-libXext-devel
         
-    Optional to get ALL prerequisites:
-    >sudo zypper install gcc-fortran libopenssl-devel \
+   Optional to get ALL prerequisites:
+    sudo zypper install gcc-fortran libopenssl-devel \
         pcre-devel Mesa glew-devel pkg-config libmysqlclient-devel \
         fftw3-devel libcfitsio-devel graphviz-devel \
         libdns_sd avahi-compat-mDNSResponder-devel openldap2-devel \
@@ -45,17 +45,17 @@ HOW TO USE THIS GUIDE:
 
         
   1.b - Download ROOT
-    Load a terminal window (this should open in your home folder)
+   Load a terminal window (this should open in your home folder)
     
-    Git Clone Root (equivilant to downloading)
-    >git clone http://root.cern.ch/git/root.git
-    Make a cup of tea, this takes a while.
+   Git Clone Root (equivilant to downloading)
+    git clone http://root.cern.ch/git/root.git
+   Make a cup of tea, this takes a while.
     
-    Tell Git to use the 5.34 branch of ROOT
-    >cd root
-    >git tag -l
-    >git checkout -b v5-34-10 v5-34-10
-    Drink said Tea, the temerature should be just about right.
+   Tell Git to use the 5.34 branch of ROOT
+    cd root
+    git tag -l
+    git checkout -b v5-34-10 v5-34-10
+   Drink said Tea, the temperature should be just about right.
     
   1.c - Compile ROOT
     
