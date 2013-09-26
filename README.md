@@ -1,4 +1,71 @@
 slitrani-fixed
 ==============
 
-Modified Installation files for SLitrani 
+Modified Installation files for SLitrani. 
+
+This is a walkthrough guide to installing ROOT, SLitrani and Git onto a Linux machine.
+
+INTRODUCTION:
+  When I went to use SLitrani there were many issues within the installation files so this GitHub Repository contains the files that I have modified to get SLitrani working onto my computer and those used at Warwick CSC. This guide is not meant to be exhaustive and you may need to do further edits yourself to get SLitrani running on your machine, I know for instance that certain linux versions are more picky about the makefiles than others and so I can only be sure this is working on the exact machine I'm using.
+
+  I make no claim to this software, I simply am presenting the fixes I've made to get it running on my computers. SLitrani is owned by François-Xavier Gentit and the original code is found here http://gentitfx.fr/SLitrani/. 
+  If Mr Gentit is reading this please take note to the list at the bottom of all the changes I've made to your code and either link here or update your code so that newer systems can run this brilliant software!
+
+LINUX VERSION: OpenSUSE 12.3 x64 (current as of 26-Sep-2013)
+
+ROOT Version: 5.34/10 
+
+HOW TO USE THIS GUIDE:
+  Firstly read it all, its good to get an overview of what we are doing and why.
+  Secondly use common sense, if you know a better way of doing what I'm trying to do, do it (and let me know how :)
+  Code for terminal is written like:
+  >cd root
+  enter this: "cd root" in your terminal application, but skip the ">".
+  Any issues with this code please post an issue in GitHub.
+  Finally if you have issues that cant be solved there my email address is m.d.abbott@warwick.ac.uk
+
+1.Installing - ROOT
+  ROOT is a well documented piece of software so you shouldn't have too many issues here, the one thing I'll say is install ALL prerequisites as the library MathMore does seem to need them (and I'll show you how to do this).
+  NOTE: If you are working on a University managed machine (eg: Warwick CSC) ROOT may already be setup for you, check with your IT provider.
+
+  1.a - Prerequisites and GIT
+    Go to http://root.cern.ch/drupal/content/build-prerequisites
+    Follow this guide and install all required prerequisites AND all optional ones
+    As of date this is done by
+    >sudo zypper install git bash make gcc-c++ gcc binutils \
+        xorg-x11-libX11-devel xorg-x11-libXpm-devel xorg-x11-devel \
+        xorg-x11-proto-devel xorg-x11-libXext-devel
+        
+    Optional to get ALL prerequisites:
+    >sudo zypper install gcc-fortran libopenssl-devel \
+        pcre-devel Mesa glew-devel pkg-config libmysqlclient-devel \
+        fftw3-devel libcfitsio-devel graphviz-devel \
+        libdns_sd avahi-compat-mDNSResponder-devel openldap2-devel \
+        python-devel libxml2-devel krb5-devel gsl-devel libqt4-devel
+
+        
+  1.b - Download ROOT
+    Load a terminal window (this should open in your home folder)
+    
+    Git Clone Root (equivilant to downloading)
+    >git clone http://root.cern.ch/git/root.git
+    Make a cup of tea, this takes a while.
+    
+    Tell Git to use the 5.34 branch of ROOT
+    >cd root
+    >git tag -l
+    >git checkout -b v5-34-10 v5-34-10
+    Drink said Tea, the temerature should be just about right.
+    
+  1.c - Compile ROOT
+    
+
+
+    
+
+
+
+LIST OF CHANGES TO SLITRANI
+If you are a user please ignore this as all these changes are already in the GitHub repository and you dont need them.
+
+1	
