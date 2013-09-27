@@ -112,10 +112,24 @@ HOW TO USE THIS GUIDE:
     
     Now copy the folder "macros" into the rootdev folder you made earlier
     
-    Create in rootdev three folders: "bin", "include" and "lib".
+    Create in rootdev, three folders: "bin", "include" and "lib".
     
     
+  2.c Install SLitrani
+    You'll be using three commands in each folder this order:
+    >make clean
+    >make
+    >make install
     
+    So to start with, in terminal navigate to slitrani-fixed.
+    Run the three commands in each folder in this order:
+      1.TwoPad
+      2.SplineFit
+      3.PhysMore
+      4.SLitrani
+      5.VisuSLitrani
+    After each you should get a notification saying it is done at the end of "make". If "make" does not compile correctly then you need to read the code as to why, often this is due to missing out a previous section such as forgetting "make install" before running the next section.
+      
     
 
 
