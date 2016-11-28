@@ -10,6 +10,8 @@
 #include "TArrayI.h"
 #include "TArrayD.h"
 
+using namespace std;
+
 class TZigZag : public TObject {
 
 protected:

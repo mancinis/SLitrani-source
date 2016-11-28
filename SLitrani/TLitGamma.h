@@ -169,8 +169,8 @@ public:
   KindOfDist        KindOfEmission() const { return fKindOfEmission;    }
   void              MoveCradle(TGeoMatrix*,Bool_t=kTRUE);
   void              NameFromPath(TString&) const;
-  Bool_t            SetEmission(KindOfDist=flat,Double_t=1.0,TVector3=0.0,const char* ="",
-                      Bool_t=kFALSE,TVector3=0.0,Bool_t=kTRUE,TVector3=0.0);
+  Bool_t            SetEmission(KindOfDist=flat,Double_t=1.0,TVector3={0.0,0.0,0.0},const char* ="",
+				Bool_t=kFALSE,TVector3={0.0,0.0,0.0},Bool_t=kTRUE,TVector3={0.0,0.0,0.0});
   void              SetFillDeath(TH1F*, TH1F*, TH1F*);
   void              WhichToDraw(Int_t=1);
   ClassDef(TLitGamma,1)//Generation of gamma rays of energy less than ~1 Mev

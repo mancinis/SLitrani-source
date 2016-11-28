@@ -14,6 +14,7 @@
 #include "TObject.h"
 #include "TComplex.h"
 
+using namespace std;
 class TArrayZ : public TObject {
 
 protected:

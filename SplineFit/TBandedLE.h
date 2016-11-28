@@ -9,6 +9,8 @@
 #include "TVectorD.h"
 #include "TMatrixD.h"
 
+using namespace std;
+
 class TBandedLE : public TObject {
 
 protected:

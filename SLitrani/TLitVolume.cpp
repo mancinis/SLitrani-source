@@ -773,14 +773,14 @@ void TLitVolume::ClearEmission() {
   // cancel the effect of SetEmission().
   fEmitPhoton  = kFALSE;
   fSourceFixed = kFALSE;
-  fSourcePoint = 0.0;
-  fSourceDir   = 0.0;
+  fSourcePoint = {0.0,0.0,0.0};
+  fSourceDir   = {0.0,0.0,0.0};
   fThetaMax   = TMath::Pi();
   fFitDist     = 0;
   fFromFace    = kFALSE;
-  fDirFace     = 0.0;
+  fDirFace     = {0.0,0.0,0.0};
   fPolarized   = kFALSE;
-  fPolar       = 0.0;
+  fPolar       = {0.0,0.0,0.0};
 }
 Bool_t TLitVolume::EmissionToWCS() {
   //  Given a fPath like "/T_1/A_2/B_2", pointing to a particular instance [node] of

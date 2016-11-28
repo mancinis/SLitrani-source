@@ -218,8 +218,8 @@ public:
   void           SetDetector(Bool_t, const char*, Double_t, Double_t = 0.0, Double_t = 0.0, Double_t = 1.0);
   void           SetDielTensor();
   Bool_t         SetEField(Bool_t=kFALSE,Double_t=90.0,Double_t=0.0,ChoiceOfn = israndom);
-  Bool_t         SetEmission(KindOfDist=on4pi,Double_t=180.0,TVector3=0.0,
-                   const char* = "",Bool_t=kFALSE,TVector3=0.0,Bool_t=kFALSE,TVector3=0.0);
+  Bool_t         SetEmission(KindOfDist=on4pi,Double_t=180.0,TVector3={0.0,0.0,0.0},
+			     const char* = "",Bool_t=kFALSE,TVector3={0.0,0.0,0.0},Bool_t=kFALSE,TVector3={0.0,0.0,0.0});
   void           SetGeoVolume(TGeoVolume *v)     { fGeoVolume = v;      }
   void           SetKindOfEmission(KindOfDist k) { fKindOfEmission = k; }
   void           SetM();
@@ -227,7 +227,7 @@ public:
   void           SetNoDamage(Bool_t = kFALSE);
   void           SetOpticalAxis(Double_t, Double_t, Double_t, Double_t);
   void           SetPhotoTube(const char*,Double_t dir,Double_t = -1.0);
-  Bool_t         SetSourcePoint(Bool_t,TVector3 = 0.0);
+  Bool_t         SetSourcePoint(Bool_t,TVector3 = {0.0,0.0,0.0});
   Double_t       SetStep(Double_t);
   void           SetWCS();
   void           ShowDamage() const;

@@ -13,7 +13,7 @@
 //////////////////////////////////////////////////////////////////////////
 #include "TObject.h"
 #include "TComplex.h"
-
+using namespace std;
 template <typename TT> class TNArray : public TObject {
 
 protected:

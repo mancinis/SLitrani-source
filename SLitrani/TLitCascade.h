@@ -107,12 +107,12 @@ public:
 
   TLitCascade() { InitP(); }
   TLitCascade(const char*,const char*,const char*,const char*,Int_t=22,Double_t=100.0,
-    TVector3=1000000000.0,TVector3=0.0,Double_t=0.05);
+	      TVector3={1000000000.0,1000000000.0,1000000000.0},TVector3={0.0,0.0,0.0},Double_t=0.05);
   TLitCascade(const char*,const char*,const char*,TLitMedium*,Int_t=22,Double_t=100.0,
-    TVector3=1000000000.0,TVector3=0.0,Double_t=0.05);
-  TLitCascade(const char*,const char*,const char*,TVector3,TVector3=0.0,Int_t=22,
+	      TVector3={1000000000.0,1000000000.0,1000000000.0},TVector3={0.0,0.0,0.0},Double_t=0.05);
+  TLitCascade(const char*,const char*,const char*,TVector3,TVector3={0.0,0.0,0.0},Int_t=22,
     Double_t=100.0,Double_t=0.05);
-  TLitCascade(const char*,const char*,TLitMedium*,TVector3,TVector3=0.0,Int_t=22,
+  TLitCascade(const char*,const char*,TLitMedium*,TVector3,TVector3={0.0,0.0,0.0},Int_t=22,
     Double_t=100.0,Double_t=0.05);
   virtual        ~TLitCascade();
   void            Gen(Int_t,Double_t = -2.0e+20,Bool_t = kTRUE,Bool_t = kFALSE);
@@ -120,8 +120,8 @@ public:
   Double_t        GetPhotFac() const      { return fPhotFac;      }
   const char     *GetTitle() const        { return fTitle.Data(); }
   void            NewEnergy(Double_t);
-  void            NewPosition(const char*,TVector3=1000000000.0,TVector3=0.0);
-  void            NewPosition(TVector3,TVector3=0.0);
+  void            NewPosition(const char*,TVector3={1000000000.0,1000000000.0,1000000000.0},TVector3={0.0,0.0,0.0});
+  void            NewPosition(TVector3,TVector3={0.0,0.0,0.0});
   void            SetName(const char *n)  { fName = n;            }
   void            SetPhotFac(Double_t f)  { fPhotFac=f;           }
   void            SetSteps(Int_t,Int_t=35,Int_t=120);

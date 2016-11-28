@@ -14,6 +14,8 @@
 #include "TNamed.h"
 #include "TString.h"
 
+using namespace std;
+
 class TAuthor : public TNamed {
 
 protected:

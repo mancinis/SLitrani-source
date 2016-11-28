@@ -126,8 +126,8 @@ public:
   void              MoveCradle(TGeoMatrix*,Bool_t=kTRUE);
   void              NameFromPath(TString&) const;
   void              SetCerenkov(Bool_t);
-  Bool_t            SetEmission(KindOfDist=flat,Double_t=1.0,TVector3=0.0,const char* ="",
-                      Bool_t=kFALSE,TVector3=0.0,Bool_t=kTRUE,TVector3=0.0);
+  Bool_t            SetEmission(KindOfDist=flat,Double_t=1.0,TVector3={0.0,0.0,0.0},const char* ="",
+				Bool_t=kFALSE,TVector3={0.0,0.0,0.0},Bool_t=kTRUE,TVector3={0.0,0.0,0.0});
   void              SetParticle(TLitParticle*,Bool_t=kFALSE);
   ClassDef(TLitBeam,1) //Defines a beam of particles
 };

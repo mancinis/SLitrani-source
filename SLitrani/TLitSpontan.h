@@ -69,8 +69,8 @@ public:
   void              NameFromPath(TString&) const;
   void              Periodicity(Long64_t=5000) const;
   void              Print() const;
-  Bool_t            SetEmission(KindOfDist=on4pi,Double_t=180.0,TVector3=0.0,
-                      const char* = "",Bool_t=kFALSE,TVector3=0.0,Bool_t=kFALSE,TVector3=0.0);
+  Bool_t            SetEmission(KindOfDist=on4pi,Double_t=180.0,TVector3={0.0,0.0,0.0},
+				const char* = "",Bool_t=kFALSE,TVector3={0.0,0.0,0.0},Bool_t=kFALSE,TVector3={0.0,0.0,0.0});
   void              SetFillDeath(TH1F*, TH1F*, TH1F*);
   void              SetRecordedTracks(Int_t k) { fRecordedTracks = k;    }
   void              SetWvlgth(Double_t);
